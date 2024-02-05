@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Barbería ALURA</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="caja1">
+            <h1><img src="imagenes/logo.png" alt="Logo de la Barbería ALURA"></h1> <!-- Se pone el logo adentro de un h1 para que destaque -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <form>
+            <label for="nombreapellido">Nombre y apellido</label>
+            <input type="text" id="nombreapellido" class="input-padron" required>
+
+            <label for="correoelectronico">Correo electrónico</label>
+            <input type="email" id="correoelectronico" class="input-padron" placeholder="email@dominio.com" required>
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" class="input-padron" placeholder="(XX) XXXX XXXX" required>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea>
+
+            <fieldset> <!--En este caso es más correcto usar esta etiqueta que div porque es la manera de indicarle al navegador que los elementos dentro están relacionados, son un conjunto de datos-->
+                <legend>¿Cómo le gustaría que lo contactemos?</legend> <!-- Por la misma razón es más correcto usar legend que p acá -->
+                <label for="radio-email"><input type="radio" name="contacto" value="E-mail" id="radio-email">E-mail</label>
+                
+                <label for="radio-telefono"><input type="radio" name="contacto" value="Teléfono" id="radio-telefono">Teléfono</label>
+                
+                <label for="radio-whatsapp"><input type="radio" name="contacto" value="Whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>¿En cuál horario prefiere ser atendido?</legend>
+                <select>
+                    <option>Mañana</option>
+                    <option>Tarde</option>
+                    <option>Noche</opttion>
+                </select>
+            </fieldset>
+
+            <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de la Barbería ALURA?</label>
+
+            <input type="submit" value="Enviar formulario" class="enviar"> <!--Como el navegador está en español, si no le ponemos un value, le pone por defecto el valor "Enviar"; si estuviera en otro idioma lo pondría en otro idioma-->
+        </form>
+        <table>
+            <thead> <!--Encabezado de la tabla-->
+                <tr>
+                    <th>Día</th> <!--Equivalente al td pero del encabezado-->
+                    <th>Horario</th>
+                </tr>
+            </thead>
+            <tbody> <!--Cuerpo de la tabla-->
+                <tr> <!--Fila-->
+                    <td>Lunes</td> <!--Columna-->
+                    <td>08h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Miércoles</td>
+                    <td>08h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>08h ~ 20h</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <img src="imagenes/logo-blanco.png" alt="Logo de la Barbería ALURA">
+        <p class="copyright">&copy; Copyright Barbería ALURA - 2024</p> <!--&copy; es el código para el símbolo de copyright; se pueden obtener estos códigos para otros símbolos en symbl.cc-->
+    </footer>
+</body>
+
+</html>
